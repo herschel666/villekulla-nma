@@ -1,0 +1,21 @@
+name: Build and Test
+
+on: [push, pull_request]
+
+jobs:
+  ci-cd:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Use Node.js 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - name: Build & test the application
+        run: |
+          npm install
+          npm test
+          npm run build
