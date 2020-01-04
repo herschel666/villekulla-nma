@@ -19,7 +19,7 @@ interface Props {
   title: string;
 }
 
-export const SEO: React.FC<Props> = ({
+export const Seo: React.FC<Props> = ({
   description = '',
   lang = 'de',
   meta = [],

@@ -1,0 +1,12 @@
+.header {
+  @apply w-full;
+  @apply flex;
+  @apply justify-between;
+  @apply items-center;
+}
+
+.title {
+  @apply text-blue-600;
+  @apply text-3xl;
+  @apply tracking-wider;
+}

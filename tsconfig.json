@@ -21,7 +21,7 @@
       "react": ["node_modules/@types/react"]
     }
   },
-  "include": ["./src/**/*", "gatsby-*.js"],
+  "include": ["./src/**/*", "gatsby-*.js", "*.config.js"],
   "exclude": ["node_modules"],
   "lib": ["dom", "es2015", "es2016"]
 }

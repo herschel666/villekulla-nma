@@ -1,0 +1,55 @@
+.button {
+  width: 3rem;
+  height: 2rem;
+  @apply flex;
+  @apply relative;
+  @apply overflow-hidden;
+}
+
+.burger,
+.burger::before,
+.burger::after {
+  width: 3rem;
+  @apply rounded-sm;
+  @apply bg-gray-600;
+}
+
+.burger {
+  height: 0.35rem;
+}
+
+.burger:hover,
+.burger:focus {
+  @apply opacity-75;
+}
+
+.burger::before,
+.burger::after {
+  content: '';
+  height: 0.4rem;
+  @apply block;
+  @apply absolute;
+  @apply inset-x-0;
+}
+
+.burger::before {
+  top: 0.05rem;
+}
+
+.burger::after {
+  bottom: 0.05rem;
+}
+
+.label {
+  @apply sr-only;
+}
+
+.inactive {
+  pointer-events: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .button {
+    display: none;
+  }
+}
