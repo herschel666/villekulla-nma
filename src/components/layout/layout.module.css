@@ -1,0 +1,95 @@
+.wrapper {
+  @apply h-screen;
+  max-width: theme('screens.xl');
+  padding: 0 1rem;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 100%;
+  grid-template-rows: 6rem auto 4rem;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+}
+
+.header {
+  grid-area: header;
+  @apply border-b-8;
+}
+
+.main {
+  grid-area: main;
+}
+
+.navigation {
+  width: 16rem;
+  grid-area: navigation;
+  @apply fixed;
+  @apply inset-0;
+  @apply right-auto;
+}
+
+.navigationEnter {
+  opacity: 0;
+  transform: translateX(-100%);
+  @apply flex;
+}
+
+.navigationEnterActive {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+  will-change: opacity, transform;
+  @apply pointer-events-none;
+  @apply flex;
+}
+
+.navigationEnterDone {
+  @apply flex;
+}
+
+.navigationExit {
+  opacity: 1;
+  transform: translateX(0);
+  @apply flex;
+}
+
+.navigationExitActive {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 300ms, transform 300ms;
+  will-change: opacity, transform;
+  @apply pointer-events-none;
+  @apply flex;
+}
+
+.footer {
+  grid-area: footer;
+  @apply border-t-4;
+}
+
+.header,
+.footer {
+  @apply flex;
+  @apply items-center;
+  @apply border-gray-100;
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    grid-template-columns: 12rem auto;
+    grid-template-rows: 6rem auto 4rem;
+    grid-template-areas:
+      'empty      header'
+      'navigation main'
+      'navigation footer';
+  }
+
+  .navigation {
+    width: initial;
+    padding: initial;
+    display: initial;
+    @apply static;
+  }
+}

@@ -1,0 +1,30 @@
+.nav {
+  padding: 1rem;
+  display: none;
+  @apply h-full;
+  @apply flex-col;
+  @apply bg-white;
+  @apply shadow-xl;
+}
+
+.item {
+  @apply py-4;
+  @apply leading-loose;
+  @apply whitespace-no-wrap;
+}
+
+.active {
+  @apply font-bold;
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    padding: initial;
+    @apply flex;
+    @apply shadow-none;
+  }
+
+  .item {
+    @apply py-2;
+  }
+}

@@ -1,12 +1,13 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
   extends: [
-    'eslint:recommended',
-    'plugin:prettier/recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
+    'eslint:recommended',
     'prettier/@typescript-eslint',
+    'plugin:prettier/recommended',
   ],
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'react', 'react-hooks'],
   parserOptions: {
     ecmaVersion: 2018,
     ecmaFeatures: {
@@ -14,6 +15,7 @@ module.exports = {
     },
     sourceType: 'module',
     useJSXTextNode: true,
+    tsconfigRootDir: './',
     project: './tsconfig.json',
   },
   env: {
@@ -28,7 +30,8 @@ module.exports = {
   },
   globals: {},
   rules: {
-    // 'typescript/no-var-requires': 'off',
     'react/prop-types': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
   },
 };
