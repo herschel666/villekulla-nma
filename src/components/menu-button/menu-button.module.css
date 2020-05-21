@@ -2,6 +2,7 @@
   width: 3rem;
   height: 2rem;
   @apply flex;
+  @apply items-center;
   @apply relative;
   @apply overflow-hidden;
 }
@@ -12,14 +13,15 @@
   width: 3rem;
   @apply rounded-sm;
   @apply bg-gray-600;
+  @apply pointer-events-none;
 }
 
 .burger {
   height: 0.35rem;
 }
 
-.burger:hover,
-.burger:focus {
+.button:hover .burger,
+.button:focus .burger {
   @apply opacity-75;
 }
 

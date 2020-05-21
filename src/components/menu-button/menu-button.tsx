@@ -23,7 +23,7 @@ export const MenuButton: React.FC = () => {
       className={classNames(styles.button, {
         [styles.inactive]: navigationVisible,
       })}
-      onMouseDown={showNavigation}
+      onClick={showNavigation}
       onKeyDown={showNavigation}
       onMouseUp={handleOnMouseUp}
     >
