@@ -16,7 +16,7 @@ module.exports = {
     sourceType: 'module',
     useJSXTextNode: true,
     tsconfigRootDir: './',
-    project: './tsconfig.json',
+    project: './tsconfig.test.json',
   },
   env: {
     browser: true,
