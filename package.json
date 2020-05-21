@@ -26,13 +26,22 @@
     "typescript": "3.9.3"
   },
   "devDependencies": {
+    "@babel/core": "7.9.6",
+    "@babel/preset-env": "7.9.6",
+    "@babel/preset-react": "7.9.4",
+    "@babel/preset-typescript": "7.9.0",
+    "@testing-library/react": "10.0.4",
+    "@types/jest": "25.2.3",
     "@typescript-eslint/eslint-plugin": "2.34.0",
     "@typescript-eslint/parser": "2.34.0",
+    "babel-jest": "26.0.1",
     "eslint": "7.0.0",
     "eslint-config-prettier": "6.11.0",
     "eslint-plugin-prettier": "3.1.3",
     "eslint-plugin-react": "7.20.0",
     "eslint-plugin-react-hooks": "4.0.2",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "26.0.1",
     "npm-run-all": "4.1.5",
     "prettier": "2.0.5"
   },
@@ -46,7 +55,8 @@
     "clean": "gatsby clean",
     "lint": "eslint --ignore-path .gitignore --quiet --fix --cache \"./**/*.{ts,tsx,js,jsx}\"",
     "type-check": "tsc",
-    "test": "npm-run-all lint type-check"
+    "jest": "jest",
+    "test": "CI=true npm-run-all lint type-check jest"
   },
   "repository": {
     "type": "git",

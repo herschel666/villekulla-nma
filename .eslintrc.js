@@ -22,6 +22,7 @@ module.exports = {
     browser: true,
     commonjs: true,
     node: true,
+    jest: true,
   },
   settings: {
     react: {
@@ -33,5 +34,14 @@ module.exports = {
     'react/prop-types': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    'no-unused-vars': [
+      'error',
+      { ignoreRestSiblings: true, argsIgnorePattern: '^_' },
+    ],
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      { ignoreRestSiblings: true, argsIgnorePattern: '^_' },
+    ],
   },
 };
