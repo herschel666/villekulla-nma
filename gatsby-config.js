@@ -17,7 +17,12 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-netlify',
       options: {
-        headers: {},
+        headers: {
+          '/*': [
+            'x-robots-tag: noindex, noarchive, nosnippet',
+            'cache-control: private, no-store',
+          ],
+        },
       },
     },
     'gatsby-plugin-postcss',
