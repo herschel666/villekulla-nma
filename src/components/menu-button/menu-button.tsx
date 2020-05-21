@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import classNames from 'classnames';
 
-import { PageContext, PageContextInterface } from '../page-context';
+import { PageContext } from '../page-context';
+import type { PageContextInterface } from '../page-context';
 import styles from './menu-button.module.css';
 
 export const MenuButton: React.FC = () => {

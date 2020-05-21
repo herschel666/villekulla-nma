@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { navigate, Link as GatsbyLink, GatsbyLinkProps } from 'gatsby';
 
-import { PageContext, PageContextInterface } from '../page-context';
+import { PageContext } from '../page-context';
+import type { PageContextInterface } from '../page-context';
 
 export const Link: React.FC<GatsbyLinkProps<{}>> = ({
   children,
