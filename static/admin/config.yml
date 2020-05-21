@@ -1,0 +1,20 @@
+locale: 'de'
+
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: 'pages'
+    label: 'Seiten'
+    folder: 'content'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Titel', name: 'title', widget: 'string' }
+      - { label: 'Inhalt', name: 'body', widget: 'markdown' }
