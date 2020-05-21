@@ -22,6 +22,5 @@
       "react": ["node_modules/@types/react"]
     }
   },
-  "include": ["./src/**/*", "gatsby-*.js", "*.config.js"],
-  "exclude": ["node_modules"]
+  "include": ["./src/**/*"]
 }
