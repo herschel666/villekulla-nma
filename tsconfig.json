@@ -15,6 +15,7 @@
     "noImplicitAny": true,
     "moduleResolution": "node",
     "skipLibCheck": true,
+    "esModuleInterop": true,
     "typeRoots": ["node_modules/@types"],
     "baseUrl": ".",
     "paths": {
@@ -22,6 +23,5 @@
     }
   },
   "include": ["./src/**/*", "gatsby-*.js", "*.config.js"],
-  "exclude": ["node_modules"],
-  "lib": ["dom", "es2015", "es2016"]
+  "exclude": ["node_modules"]
 }
