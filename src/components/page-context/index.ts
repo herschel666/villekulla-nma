@@ -1,5 +1,2 @@
-export {
-  PageContextProvider,
-  PageContext,
-  PageContextInterface,
-} from './page-context';
+export { PageContextProvider, PageContext } from './page-context';
+export type { PageContextInterface } from './page-context';

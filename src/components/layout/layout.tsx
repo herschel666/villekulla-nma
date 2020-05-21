@@ -4,7 +4,8 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import { Header } from '../header';
 import { MainNav } from '../main-nav';
-import { PageContext, PageContextInterface } from '../page-context';
+import { PageContext } from '../page-context';
+import type { PageContextInterface } from '../page-context';
 
 import styles from './layout.module.css';
 import './layout.css';
