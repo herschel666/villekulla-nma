@@ -12,6 +12,7 @@ jest.mock('gatsby', () => ({
         description: 'Lustige Beschreibung.',
       },
     },
+    nav: [{ slug: '/ueber-uns/', title: 'Über uns' }],
   }),
   graphql: jest.fn(),
   Link({ to, children, activeClassName, ...props }: GatsbyLinkProps<{}>) {
