@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
-import { navigate, Link as GatsbyLink, GatsbyLinkProps } from 'gatsby';
+import { navigate, Link as GatsbyLink } from 'gatsby';
+import type { GatsbyLinkProps } from 'gatsby';
 
 import { PageContext } from '../page-context';
 import type { PageContextInterface } from '../page-context';
