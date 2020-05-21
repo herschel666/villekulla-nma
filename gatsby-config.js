@@ -20,13 +20,6 @@ module.exports = {
         headers: {},
       },
     },
-    {
-      resolve: `gatsby-plugin-typescript`,
-      options: {
-        isTSX: true,
-        allExtensions: true,
-      },
-    },
     'gatsby-plugin-postcss',
   ],
 };
