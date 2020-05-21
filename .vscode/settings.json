@@ -1,0 +1,3 @@
+{
+  "eslint.project": "tsconfig.test.json"
+}
