@@ -16,7 +16,6 @@ collections:
     label: 'Seiten'
     folder: 'content'
     create: true
-    slug: '{{slug}}'
     editor:
       preview: false
     fields:
