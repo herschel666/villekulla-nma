@@ -1,0 +1,8 @@
+.heading {
+  @apply font-medium;
+  @apply text-2xl;
+}
+
+.content p {
+  @apply font-body;
+}

@@ -4,6 +4,8 @@ import { graphql } from 'gatsby';
 import { Layout } from '../components/layout';
 import { Seo } from '../components/seo';
 
+import styles from './page.module.css';
+
 interface Props {
   data: {
     page: {
@@ -29,8 +31,11 @@ export const pageQuery = graphql`
 const PageTemplate: React.FC<Props> = ({ data }) => (
   <Layout>
     <Seo title={data.page.frontmatter.title} />
-    <h1>{data.page.frontmatter.title}</h1>
-    <div dangerouslySetInnerHTML={{ __html: data.page.html }} />
+    <h1 className={styles.heading}>{data.page.frontmatter.title}</h1>
+    <div
+      className={styles.content}
+      dangerouslySetInnerHTML={{ __html: data.page.html }}
+    />
   </Layout>
 );
 
