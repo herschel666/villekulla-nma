@@ -1,4 +1,5 @@
 module.exports = {
+  assetPrefix: 'https://villekulla-nma.netlify.app/',
   siteMetadata: {
     title: `Villekulla NMA`,
     description: `Occaecat mollit ad consequat et voluptate elit laborum nisi exercitation laboris exercitation aute aliquip aute.`,

@@ -8,6 +8,7 @@
     "gatsby-*.js",
     "*.config.js",
     "jest/*.js",
+    "script/*.js",
     ".eslintrc.js"
   ]
 }

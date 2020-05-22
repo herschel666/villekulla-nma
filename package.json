@@ -55,6 +55,8 @@
     "fmt": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "predeploy": "NODE_ENV=production npm run build -- --prefix-paths",
+    "deploy": "node ./script/deploy.js",
     "clean": "gatsby clean",
     "lint": "eslint --ignore-path .gitignore --quiet --fix --cache \"./**/*.{ts,tsx,js,jsx}\"",
     "type-check": "tsc",
