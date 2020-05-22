@@ -1,7 +1,7 @@
 .heading {
   @apply mb-4;
   @apply font-medium;
-  @apply text-2xl;
+  @apply text-4xl;
 }
 
 .content p {

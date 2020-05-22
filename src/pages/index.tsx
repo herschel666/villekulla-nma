@@ -1,14 +1,41 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 
 import { Layout } from '../components/layout';
 import { Seo } from '../components/seo';
 
-const IndexPage: React.FC = () => (
+import styles from './index.module.css';
+
+interface Props {
+  data: {
+    page: {
+      frontmatter: {
+        title: string;
+      };
+      html: string;
+    };
+  };
+}
+
+export const pageQuery = graphql`
+  query {
+    page: markdownRemark(fields: { slug: { eq: "/" } }) {
+      html
+      frontmatter {
+        title
+      }
+    }
+  }
+`;
+
+const IndexPage: React.FC<Props> = ({ data }) => (
   <Layout>
     <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <h1 className={styles.heading}>{data.page.frontmatter.title}</h1>
+    <div
+      className={styles.content}
+      dangerouslySetInnerHTML={{ __html: data.page.html }}
+    />
   </Layout>
 );
 

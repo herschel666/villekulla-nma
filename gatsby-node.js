@@ -13,7 +13,9 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
 
   if (node.internal.type === 'MarkdownRemark') {
-    const slug = createFilePath({ node, getNode, basePath: 'content/' });
+    const slug = node.fileAbsolutePath.endsWith('/startseite.md')
+      ? '/'
+      : createFilePath({ node, getNode, basePath: 'content/' });
 
     createNodeField({
       node,
@@ -41,10 +43,15 @@ exports.createResolvers = ({ createResolvers }) =>
             type: `MarkdownRemark`,
           });
 
-          return pages.map(({ frontmatter, fields }) => ({
-            slug: fields.slug,
-            title: frontmatter.title,
-          }));
+          return pages
+            .filter(
+              ({ fileAbsolutePath }) =>
+                !fileAbsolutePath.endsWith('/startseite.md')
+            )
+            .map(({ frontmatter, fields }) => ({
+              slug: fields.slug,
+              title: frontmatter.title,
+            }));
         },
       },
     },
@@ -70,17 +77,19 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return;
   }
 
-  result.data.pages.edges.forEach(({ node }) => {
-    const pagePathname = `/${basicSluggify(
-      path.basename(node.filePath).split('.').shift()
-    )}/`;
+  result.data.pages.edges
+    .filter(({ node }) => !node.filePath.endsWith('/startseite.md'))
+    .forEach(({ node }) => {
+      const pagePathname = `/${basicSluggify(
+        path.basename(node.filePath).split('.').shift()
+      )}/`;
 
-    createPage({
-      path: pagePathname,
-      component: pageTemplate,
-      context: {},
+      createPage({
+        path: pagePathname,
+        component: pageTemplate,
+        context: {},
+      });
     });
-  });
 };
 
 exports.onCreatePage = ({ page, actions }) => {
