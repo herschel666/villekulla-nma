@@ -1,7 +1,7 @@
 /* eslint @typescript-eslint/no-var-requires: off */
 const assert = require('assert');
 const path = require('path');
-const { promises: fs } = require('fs');
+const { promises: fs, createReadStream, createWriteStream } = require('fs');
 const archiver = require('archiver');
 const fetch = require('node-fetch');
 
@@ -27,7 +27,7 @@ const clean = async () => {
 const writeZipFile = () =>
   new Promise((resolve, reject) => {
     console.log('> Create new Zip file...');
-    const output = fs.createWriteStream(FILE_NAME);
+    const output = createWriteStream(FILE_NAME);
     const archive = archiver('zip', {
       zlib: { level: 9 },
     });
@@ -43,7 +43,7 @@ const writeZipFile = () =>
 const uploadZipFile = async () => {
   console.log('> Upload Zip file...');
   const { size } = await fs.stat(FILE_NAME);
-  const body = fs.createReadStream(FILE_NAME);
+  const body = createReadStream(FILE_NAME);
   const response = await fetch(
     `${API_BASE}/sites/villekulla-nma.netlify.com/deploys`,
     {
