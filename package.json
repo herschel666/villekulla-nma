@@ -37,7 +37,7 @@
     "@types/jest": "26.0.4",
     "@typescript-eslint/eslint-plugin": "2.34.0",
     "@typescript-eslint/parser": "2.34.0",
-    "archiver": "4.0.1",
+    "archiver": "4.0.2",
     "babel-jest": "26.1.0",
     "eslint": "7.4.0",
     "eslint-config-prettier": "6.11.0",
