@@ -5,7 +5,7 @@ import type { GatsbyLinkProps } from 'gatsby';
 import { PageContext } from '../page-context';
 import type { PageContextInterface } from '../page-context';
 
-export const Link: React.FC<GatsbyLinkProps<{}>> = ({
+export const Link: React.FC<GatsbyLinkProps<Record<string, unknown>>> = ({
   children,
   // eslint-disable-next-line no-unused-vars
   ref,
