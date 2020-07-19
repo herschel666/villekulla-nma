@@ -15,7 +15,12 @@ jest.mock('gatsby', () => ({
     nav: [{ slug: '/ueber-uns/', title: 'Über uns' }],
   }),
   graphql: jest.fn(),
-  Link({ to, children, activeClassName, ...props }: GatsbyLinkProps<{}>) {
+  Link({
+    to,
+    children,
+    activeClassName,
+    ...props
+  }: GatsbyLinkProps<Record<string, unknown>>) {
     return (
       <a href={to} {...props}>
         {children}
