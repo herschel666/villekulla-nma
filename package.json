@@ -64,7 +64,7 @@
     "lint": "eslint --ignore-path .gitignore --quiet --fix --cache \"./**/*.{ts,tsx,js,jsx}\"",
     "type-check": "tsc",
     "jest": "jest",
-    "test": "CI=true npm-run-all lint type-check jest"
+    "test": "CI=true npm-run-all lint type-check jest build"
   },
   "repository": {
     "type": "git",
