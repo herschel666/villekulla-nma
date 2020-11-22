@@ -22,5 +22,6 @@
       "react": ["node_modules/@types/react"]
     }
   },
-  "include": ["./src/**/*"]
+  "include": ["./src"],
+  "exclude": ["node_modules", ".cache", "public"]
 }
