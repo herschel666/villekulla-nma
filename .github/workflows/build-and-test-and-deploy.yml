@@ -24,11 +24,15 @@ jobs:
         with:
           node-version: '14.x'
 
-      - name: Build & test the application
+      - name: Test the application
         run: |
           npm ci
           npm test
-          npm run build
+
+      - name: Build the application
+        run: npm run build
+        env:
+          NODE_ENV: production
 
       - name: Deploy the application
         if: github.ref == 'refs/heads/KillYourMaster'
