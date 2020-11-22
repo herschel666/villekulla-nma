@@ -10,7 +10,7 @@
 .item {
   @apply py-4;
   @apply leading-loose;
-  @apply whitespace-no-wrap;
+  @apply whitespace-nowrap;
 }
 
 .active {
