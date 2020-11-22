@@ -63,9 +63,10 @@ const useHideOnEscapePress = ({
 };
 
 export const Layout: React.FC = ({ children }) => {
-  const { navigationVisible, toggleNavigation } = useContext<
-    PageContextInterface
-  >(PageContext);
+  const {
+    navigationVisible,
+    toggleNavigation,
+  } = useContext<PageContextInterface>(PageContext);
   const navigationRef = useHideInClickAnywhere({
     navigationVisible,
     toggleNavigation,
