@@ -15,7 +15,7 @@ const useHideInClickAnywhere = ({
   toggleNavigation,
 }: PageContextInterface) => {
   const navigation = useRef<HTMLDivElement>(null);
-  const mousedownCallback = useRef<(evnt: MouseEvent) => void>();
+  const mousedownCallback = useRef<(_: MouseEvent) => void>();
 
   useEffect(() => {
     if (navigationVisible) {
@@ -43,7 +43,7 @@ const useHideOnEscapePress = ({
   navigationVisible,
   toggleNavigation,
 }: PageContextInterface) => {
-  const keyupCallback = useRef<(evnt: KeyboardEvent) => void>();
+  const keyupCallback = useRef<(_: KeyboardEvent) => void>();
 
   useEffect(() => {
     if (navigationVisible) {
