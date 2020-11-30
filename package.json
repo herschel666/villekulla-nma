@@ -61,7 +61,8 @@
     "predeploy": "NODE_ENV=production npm run build -- --prefix-paths",
     "deploy": "node ./script/deploy.js",
     "clean": "gatsby clean",
-    "lint": "eslint --ignore-path .gitignore --quiet --fix --cache \"./**/*.{ts,tsx,js,jsx}\"",
+    "lint": "eslint --ignore-path .gitignore --quiet --cache \"./**/*.{ts,tsx,js,jsx}\"",
+    "lint:fix": "npm run lint -- --fix",
     "type-check": "tsc",
     "jest": "jest",
     "test": "CI=true npm-run-all lint type-check jest build"
