@@ -27,7 +27,7 @@
     "@babel/preset-env": "7.12.11",
     "@babel/preset-react": "7.12.10",
     "@babel/preset-typescript": "7.12.7",
-    "@testing-library/react": "11.2.3",
+    "@testing-library/react": "11.2.4",
     "@types/classnames": "2.2.11",
     "@types/jest": "26.0.20",
     "@types/react-helmet": "6.1.0",
