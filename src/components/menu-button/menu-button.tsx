@@ -6,10 +6,8 @@ import type { PageContextInterface } from '../page-context';
 import styles from './menu-button.module.css';
 
 export const MenuButton: React.FC = () => {
-  const {
-    navigationVisible,
-    toggleNavigation,
-  } = useContext<PageContextInterface>(PageContext);
+  const { navigationVisible, toggleNavigation } =
+    useContext<PageContextInterface>(PageContext);
   const showNavigation = (evnt: React.SyntheticEvent<HTMLButtonElement>) => {
     if (evnt.type === 'keydown' || !navigationVisible) {
       evnt.stopPropagation();

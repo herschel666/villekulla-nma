@@ -18,7 +18,7 @@ interface Props {
 }
 
 export const pageQuery = graphql`
-  query($path: String!) {
+  query ($path: String!) {
     page: markdownRemark(fields: { slug: { eq: $path } }) {
       html
       frontmatter {
