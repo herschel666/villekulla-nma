@@ -11,10 +11,8 @@ export const Link: React.FC<GatsbyLinkProps<Record<string, unknown>>> = ({
   ref,
   ...props
 }) => {
-  const {
-    navigationVisible,
-    toggleNavigation,
-  } = useContext<PageContextInterface>(PageContext);
+  const { navigationVisible, toggleNavigation } =
+    useContext<PageContextInterface>(PageContext);
   const handleClick = (evnt: React.SyntheticEvent<HTMLAnchorElement>) => {
     evnt.preventDefault();
     navigate(props.to);
